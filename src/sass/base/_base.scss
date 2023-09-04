@@ -13,7 +13,6 @@
 
 @each $breakpoint, $dimension in variables.$grid-breakpoints {
     $max-width: map-get(variables.$container-max-widths, $breakpoint);
-    $infix: if($breakpoint == xs, '', '-#{$breakpoint}');
 
     @include mixins.make-media-query($dimension, $breakpoint == xs) {
         .container {
