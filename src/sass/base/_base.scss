@@ -15,10 +15,16 @@
 
 @each $breakpoint, $dimension in variables.$grid-breakpoints {
     $max-width: map-get(variables.$container-max-widths, $breakpoint);
+    $tech-stack-item: map-get(variables.$tech-stack-items, $breakpoint);
 
+    @debug (tech-stack-item);
     @include mixins.make-media-query($dimension, $breakpoint == xs) {
         .container {
             max-width: $max-width;
+        }
+
+        .tech-stack-list {
+            @include mixins.make-grid-items($tech-stack-item);
         }
     }
 }

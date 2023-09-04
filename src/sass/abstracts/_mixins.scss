@@ -7,3 +7,10 @@
         }
     }
 }
+
+@mixin make-grid-items($row-items, $row-gap: null, $column-gaps: null) {
+    display: grid;
+    grid-template-columns: repeat($row-items, 1fr);
+    row-gap: $row-gap;
+    column-gap: $column-gaps;
+}
