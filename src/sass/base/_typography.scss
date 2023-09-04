@@ -1,0 +1,55 @@
+$font-path: '../../assets/fonts';
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('#{$font-path}/HelveticaNeue.ttf') format('truetype'),
+    url('#{$font-path}/HelveticaNeue.woff') format('woff'),
+    url('#{$font-path}/HelveticaNeue.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Thin';
+    src: url('#{$font-path}/HelveticaNeue-Thin.ttf') format('truetype'),
+         url('#{$font-path}/HelveticaNeue-Thin.woff') format('woff'),
+         url('#{$font-path}/HelveticaNeue-Thin.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url('#{$font-path}/HelveticaNeue-Light.ttf') format('truetype'),
+        url('#{$font-path}/HelveticaNeue-Light.woff') format('woff'),
+        url('#{$font-path}/HelveticaNeue-Light.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url('#{$font-path}/HelveticaNeue-Medium.ttf') format('truetype'),
+        url('#{$font-path}/HelveticaNeue-Medium.woff') format('woff'),
+        url('#{$font-path}/HelveticaNeue-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('#{$font-path}/HelveticaNeue-Bold.ttf') format('truetype'),
+    url('#{$font-path}/HelveticaNeue-Bold.woff') format('woff'),
+    url('#{$font-path}/HelveticaNeue-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-ExtraBold';
+    src: url('#{$font-path}/HelveticaNeue-ExtraBold.ttf') format('truetype'),
+         url('#{$font-path}/HelveticaNeue-ExtraBold.woff') format('woff'),
+         url('#{$font-path}/HelveticaNeue-ExtraBold.woff2') format('woff2');
+    font-weight: 800;   
+    font-display: swap;
+}
