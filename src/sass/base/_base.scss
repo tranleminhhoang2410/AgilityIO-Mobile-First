@@ -1,0 +1,23 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    @extend .container-fluid;
+}
+
+@each $breakpoint, $dimension in variables.$grid-breakpoints {
+    $max-width: map-get(variables.$container-max-widths, $breakpoint);
+    $infix: if($breakpoint == xs, '', '-#{$breakpoint}');
+
+    @include mixins.make-media-query($dimension, $breakpoint == xs) {
+        .container {
+            max-width: $max-width;
+        }
+    }
+}

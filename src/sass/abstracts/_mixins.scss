@@ -1,0 +1,9 @@
+@mixin make-media-query($dimension, $bypass: false) {
+    @if $bypass {
+        @content;
+    } @else {
+        @media (min-width: $dimension) {
+            @content;
+        }
+    }
+}
