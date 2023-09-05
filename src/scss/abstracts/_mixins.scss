@@ -22,6 +22,20 @@
     height: $height;
 }
 
+@mixin position(
+    $attribute,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null
+) {
+    position: $attribute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
 @mixin font(
     $fontFamily: null,
     $fontSize: null,
@@ -39,6 +53,7 @@
     $gap: null,
     $wrap: null
 ) {
+    display: flex;
     @if ($direction == null) {
         flex-direction: row;
     } @else {

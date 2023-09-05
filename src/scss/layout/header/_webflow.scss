@@ -1,0 +1,41 @@
+@use '../../abstracts';
+
+.header {
+    @include abstracts.position(fixed, 0, 0, null, 0);
+    background-color: abstracts.$white-color;
+
+    &-content {
+        @include abstracts.flex-layout(null, center, space-between, null, null);
+        @include abstracts.size(null, abstracts.$header-height);
+
+        .menu-mobile {
+            display: block;
+        }
+
+        .navbar {
+            display: none;
+            @include abstracts.size(null, 100%);
+
+            &-link {
+                @include abstracts.font(
+                    'Roboto-ExtraBold',
+                    abstracts.$fs-xxx-sm,
+                    abstracts.$primary-text-color
+                );
+                @include abstracts.size(null, 100%);
+                @include abstracts.flex-layout(
+                    null,
+                    center,
+                    center,
+                    null,
+                    null
+                );
+                border-bottom: 4px solid transparent;
+
+                &.active {
+                    border-bottom: 4px solid abstracts.$primary-text-color;
+                }
+            }
+        }
+    }
+}
