@@ -13,6 +13,16 @@
     @extend .container-fluid;
 }
 
+.section-layout {
+    padding: 32px 0;
+}
+
+@include mixins.make-media-query(992px) {
+    .section-layout {
+        padding: 64px 0;
+    }
+}
+
 @each $breakpoint, $dimension in variables.$grid-breakpoints {
     $max-width: map-get(variables.$container-max-widths, $breakpoint);
     $tech-stack-item: map-get(variables.$tech-stack-items, $breakpoint);
