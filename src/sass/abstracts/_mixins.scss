@@ -14,3 +14,26 @@
     row-gap: $row-gap;
     column-gap: $column-gaps;
 }
+
+@mixin size($width: null, $height: null) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex-layout(
+    $direction: null,
+    $alignItems: null,
+    $justifyContent: null,
+    $gap: null,
+    $wrap: null
+) {
+    @if ($direction == null) {
+        flex-direction: row;
+    } @else {
+        flex-direction: $direction;
+    }
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
