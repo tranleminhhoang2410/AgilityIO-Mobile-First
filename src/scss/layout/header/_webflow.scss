@@ -32,6 +32,11 @@
                 );
                 border-bottom: 4px solid transparent;
 
+                &:hover {
+                    opacity: 0.6;
+                    transition: opacity linear 0.3s;
+                }
+
                 &.active {
                     border-bottom: 4px solid abstracts.$primary-text-color;
                 }
