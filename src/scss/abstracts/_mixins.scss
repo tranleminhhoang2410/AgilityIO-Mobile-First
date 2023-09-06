@@ -44,6 +44,7 @@
     font-family: $fontFamily, sans-serif;
     font-size: $fontSize;
     color: $textColor;
+    line-height: variables.$primary-line-height;
 }
 
 @mixin flex-layout(

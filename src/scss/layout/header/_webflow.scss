@@ -18,7 +18,7 @@
 
             &-link {
                 @include abstracts.font(
-                    'Roboto-ExtraBold',
+                    'Roboto-Bold',
                     abstracts.$fs-xxx-sm,
                     abstracts.$primary-text-color
                 );

@@ -1,0 +1,30 @@
+@use '../../abstracts';
+
+@include abstracts.make-media-query(768px) {
+    .footer {
+        hr {
+            margin-left: 0;
+        }
+        &-content {
+            text-align: left;
+            &-list {
+                @include abstracts.flex-layout(
+                    row,
+                    flex-start,
+                    space-between,
+                    32px,
+                    null
+                );
+            }
+        }
+        &-company {
+            flex-basis: 50%;
+        }
+        &-nav-list {
+            align-items: flex-start;
+        }
+        &-social-list {
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use '../../abstracts';
+
+.footer {
+    text-align: center;
+    @include abstracts.font(
+        'Roboto-Regular',
+        abstracts.$fs-xxx-sm,
+        abstracts.$white-color
+    );
+
+    &-content {
+        background-color: abstracts.$footer-content-color;
+
+        &-list {
+            @include abstracts.flex-layout(column, center, null, 32px, null);
+        }
+    }
+
+    // &-grid {
+    //     @include abstracts.make-grid-items(1, 32px, null);
+    // }
+
+    &-title {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-sm,
+            abstracts.$white-color
+        );
+        text-transform: uppercase;
+    }
+
+    hr {
+        width: 60px;
+        height: 2px;
+        margin: 16px auto;
+        border: 0;
+        border-top: 1px solid;
+        opacity: 0.25;
+    }
+
+    &-nav-list {
+        @include abstracts.flex-layout(column, center, null, 12px, null);
+    }
+
+    &-nav-item {
+        @extend .footer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-social-list {
+        @include abstracts.flex-layout(row, center, center, 12px, null);
+    }
+
+    &-copyright {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: abstracts.$footer-copyright-color;
+    }
+}

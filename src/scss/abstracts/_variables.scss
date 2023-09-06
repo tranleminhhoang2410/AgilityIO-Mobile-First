@@ -2,6 +2,8 @@
 $primary-text-color: #0a2630;
 $secondary-text-color: #333;
 $description-text-color: #849297;
+$footer-content-color: #1c2331;
+$footer-copyright-color: #161c27;
 $white-color: #fff;
 $red-color: #f24a51;
 
@@ -36,6 +38,9 @@ $fs-xxxx-lg: 80px;
 $fs-xl: 100px;
 $fs-x-xl: 120px;
 $fs-xx-xl: 162px;
+
+//Line height
+$primary-line-height: 1.6;
 
 //Breakpoints
 $grid-breakpoints: (
