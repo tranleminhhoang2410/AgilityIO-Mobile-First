@@ -1,0 +1,29 @@
+@use '../../abstracts';
+
+.banner {
+    @include abstracts.size(100%, 400px);
+    background-image: url('../assets/images/home/home-banner.webp'),
+        url('../assets/images/home/home-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include abstracts.flex-layout(column, center, center, 8px, null);
+
+    &-heading {
+        @include abstracts.font(
+            'Roboto-Medium',
+            abstracts.$fs-xx-md,
+            abstracts.$white-color
+        );
+        text-align: center;
+        line-height: abstracts.$secondary-line-height;
+    }
+
+    .play-block {
+        @include abstracts.size(60px, 60px);
+
+        .inverted-play-btn {
+            display: none;
+        }
+    }
+}

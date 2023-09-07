@@ -1,0 +1,33 @@
+@use '../../abstracts';
+
+@include abstracts.make-media-query(768px) {
+    .banner {
+        @include abstracts.size(100%, 480px);
+
+        &-heading {
+            @include abstracts.font(
+                'Roboto-Medium',
+                abstracts.$fs-xx-lg,
+                abstracts.$white-color
+            );
+            line-height: abstracts.$secondary-line-height;
+        }
+    }
+}
+
+@include abstracts.make-media-query(992px) {
+    .banner {
+        @include abstracts.size(100%, 680px);
+        justify-content: flex-start;
+
+        &-heading {
+            margin-top: 64px;
+            @include abstracts.font(
+                'Roboto-Medium',
+                abstracts.$fs-xxx-lg,
+                abstracts.$white-color
+            );
+            line-height: abstracts.$secondary-line-height;
+        }
+    }
+}
