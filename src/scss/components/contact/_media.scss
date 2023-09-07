@@ -1,0 +1,15 @@
+@use '../../abstracts';
+
+@include abstracts.make-media-query(768px) {
+    .contact {
+        &-form {
+            &-main-heading {
+                max-width: 40%;
+            }
+
+            &-grid {
+                @include abstracts.make-grid-items(3, null, 16px);
+            }
+        }
+    }
+}

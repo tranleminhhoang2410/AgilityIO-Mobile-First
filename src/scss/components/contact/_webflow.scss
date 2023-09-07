@@ -1,3 +1,66 @@
+@use '../../abstracts';
+
 .contact {
     background-image: linear-gradient(135deg, #a43985, #4360be);
+
+    &-form {
+        @include abstracts.flex-layout(column, null, center, 32px, null);
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-xxx-sm,
+            abstracts.$white-color
+        );
+
+        &-heading {
+            @include abstracts.flex-layout(column, null, center, 16px, null);
+        }
+
+        &-sub-heading {
+            @include abstracts.font(
+                'Roboto-Medium',
+                abstracts.$fs-md,
+                abstracts.$white-color
+            );
+        }
+
+        &-main-heading {
+            @include abstracts.font(
+                'Roboto-Bold',
+                abstracts.$fs-x-lg,
+                abstracts.$white-color
+            );
+            line-height: abstracts.$secondary-line-height;
+            max-width: 80%;
+        }
+
+        &-content,
+        &-group {
+            @include abstracts.flex-layout(column, null, center, 16px, null);
+        }
+
+        &-grid {
+            @include abstracts.make-grid-items(1, 16px, null);
+        }
+
+        &-input {
+            padding: 12px;
+        }
+
+        .submit-btn {
+            width: 120px;
+            padding: 8px 12px;
+            @include abstracts.font(
+                'Roboto-Regular',
+                abstracts.$fs-xxx-sm,
+                abstracts.$white-color
+            );
+            text-transform: uppercase;
+            background-color: abstracts.$secondary-text-color;
+
+            &:hover {
+                opacity: 0.8;
+                transition: opacity linear 0.3s;
+            }
+        }
+    }
 }
