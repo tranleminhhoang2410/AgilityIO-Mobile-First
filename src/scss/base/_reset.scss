@@ -134,6 +134,18 @@ table {
     border-spacing: 0;
 }
 
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+button:disabled,
+button[disabled] {
+    pointer-events: none;
+}
+
 a {
     text-decoration: none;
 }
