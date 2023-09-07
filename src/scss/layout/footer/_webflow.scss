@@ -16,10 +16,6 @@
         }
     }
 
-    // &-grid {
-    //     @include abstracts.make-grid-items(1, 32px, null);
-    // }
-
     &-title {
         @include abstracts.font(
             'Roboto-Bold',

@@ -16,6 +16,15 @@
     padding-bottom: 32px;
 }
 
+button {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+        transition: opacity linear 0.2s;
+    }
+}
+
 @include abstracts.make-media-query(992px) {
     .section-layout {
         padding-top: 64px;
