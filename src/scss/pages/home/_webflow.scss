@@ -111,6 +111,13 @@
             @include abstracts.position(absolute, 65%, null, null, 55%);
             @include abstracts.size(35%, null);
         }
+
+        &:hover {
+            .case-studies-image {
+                transform: scale(1.2);
+                transition: transform 0.3s linear;
+            }
+        }
     }
 
     &-heading {
@@ -163,7 +170,7 @@
 
         &.worldroamer {
             @include abstracts.size(50%, auto);
-            @include abstracts.position(absolute, 5%, 10%, null, null);
+            @include abstracts.position(absolute, 5%, -5%, null, null);
         }
 
         &.early-bird {
@@ -174,5 +181,10 @@
         &.kinspire {
             @include abstracts.position(absolute, 5%, -5%, null, null);
         }
+    }
+
+    &-link {
+        display: block;
+        @include abstracts.size(100%, 100%);
     }
 }
