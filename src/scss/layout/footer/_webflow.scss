@@ -50,6 +50,13 @@
         @include abstracts.flex-layout(row, center, center, 12px, null);
     }
 
+    .social-link {
+        &:hover {
+            opacity: 0.6;
+            transition: opacity 0.3s linear;
+        }
+    }
+
     &-copyright {
         padding-top: 16px;
         padding-bottom: 16px;
