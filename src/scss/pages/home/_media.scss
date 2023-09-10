@@ -1,6 +1,7 @@
 @use '../../abstracts';
 
 @include abstracts.make-media-query(768px) {
+    //Bannner
     .banner {
         @include abstracts.size(100%, 480px);
 
@@ -13,9 +14,17 @@
             line-height: abstracts.$secondary-line-height;
         }
     }
+
+    //Who we are
+    .who-we-are {
+        &-grid {
+            @include abstracts.make-grid-items(2, 16px, 24px);
+        }
+    }
 }
 
 @include abstracts.make-media-query(992px) {
+    //Banner
     .banner {
         @include abstracts.size(100%, 680px);
         justify-content: flex-start;
@@ -28,6 +37,36 @@
                 abstracts.$white-color
             );
             line-height: abstracts.$secondary-line-height;
+        }
+    }
+
+    //Who we are
+    .who-we-are {
+        &-heading {
+            @include abstracts.flex-layout(row, null, null, 40px, null);
+
+            &-wrapper {
+                flex-basis: 50%;
+            }
+        }
+
+        &-description {
+            font-size: abstracts.$fs-md;
+        }
+
+        &-grid {
+            @include abstracts.make-grid-items(3, 16px, 24px);
+        }
+    }
+}
+
+@include abstracts.make-media-query(1200px) {
+    //Who we are
+    .who-we-are {
+        &-heading {
+            &-wrapper {
+                flex-basis: 30%;
+            }
         }
     }
 }

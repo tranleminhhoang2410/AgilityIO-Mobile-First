@@ -1,5 +1,6 @@
 @use '../../abstracts';
 
+//Banner
 .banner {
     @include abstracts.size(100%, 400px);
     background-image: url('../assets/images/home/home-banner.webp'),
@@ -25,5 +26,65 @@
         .inverted-play-btn {
             display: none;
         }
+    }
+}
+
+//Who we are
+.who-we-are {
+    @include abstracts.flex-layout(column, null, null, 60px, null);
+    background-image: url('../assets/images/common/vector.webp'),
+        url('../assets/images/common/vector.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    &-heading {
+        @include abstracts.flex-layout(column, null, null, 40px, null);
+    }
+
+    &-main-heading {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-lg,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-underline {
+        @include abstracts.size(60px, 4px);
+        background-color: abstracts.$primary-text-color;
+    }
+
+    &-description {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-xx-sm,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-grid {
+        @include abstracts.make-grid-items(1, 16px, null);
+    }
+
+    &-item {
+        padding: 16px 0;
+        border-top: 1px solid #bfbfbf;
+        @include abstracts.flex-layout(column, null, null, 16px, null);
+    }
+
+    &-title {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-md,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-content {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-xxx-sm,
+            abstracts.$primary-text-color
+        );
     }
 }
