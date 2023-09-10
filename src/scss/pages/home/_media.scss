@@ -32,6 +32,35 @@
     //Strategize Design Develop
     .strategize-design-develop {
         @include abstracts.flex-layout(row, null, null, 16px, null);
+
+        &-heading {
+            flex-basis: 30%;
+        }
+    }
+
+    //Who we work with
+    .who-we-work-with {
+        @include abstracts.flex-layout(row, null, null, 16px, null);
+
+        &-heading {
+            flex-basis: 30%;
+        }
+
+        .company {
+            flex: 1;
+
+            &-enterprise {
+                padding-top: 0;
+            }
+
+            &-list {
+                @include abstracts.make-grid-items(4, 32px, 32px);
+            }
+
+            &-item {
+                text-align: left;
+            }
+        }
     }
 }
 
@@ -75,6 +104,13 @@
     .case-studies {
         &-list {
             @include abstracts.make-grid-items(3, 16px, 16px);
+        }
+    }
+
+    //Strategize Design Develop
+    .strategize-design-develop {
+        &-image {
+            @include abstracts.size(644px, auto);
         }
     }
 }

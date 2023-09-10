@@ -237,3 +237,54 @@
         z-index: 2;
     }
 }
+
+//Who we work with
+.who-we-work-with {
+    @include abstracts.flex-layout(column, null, null, 60px, null);
+
+    &-heading {
+        @include abstracts.flex-layout(column, null, null, 40px, null);
+    }
+
+    &-main-heading {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-lg,
+            abstracts.$primary-text-color
+        );
+        line-height: abstracts.$secondary-line-height;
+        max-width: 80%;
+    }
+
+    &-description {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-md,
+            abstracts.$primary-text-color
+        );
+    }
+
+    .company {
+        &-enterprise,
+        &-startup {
+            @include abstracts.flex-layout(column, null, null, 24px, null);
+        }
+        &-heading {
+            @include abstracts.font(
+                'Roboto-Bold',
+                abstracts.$fs-xxx-sm,
+                abstracts.$company-heading-color
+            );
+            padding-bottom: 8px;
+            border-bottom: 1px solid abstracts.$company-heading-color;
+        }
+
+        &-list {
+            @include abstracts.make-grid-items(2, 32px, 32px);
+        }
+
+        &-item {
+            text-align: center;
+        }
+    }
+}
