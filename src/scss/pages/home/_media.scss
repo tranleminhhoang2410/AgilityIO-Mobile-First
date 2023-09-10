@@ -28,6 +28,11 @@
             @include abstracts.make-grid-items(2, 16px, 16px);
         }
     }
+
+    //Strategize Design Develop
+    .strategize-design-develop {
+        @include abstracts.flex-layout(row, null, null, 16px, null);
+    }
 }
 
 @include abstracts.make-media-query(992px) {

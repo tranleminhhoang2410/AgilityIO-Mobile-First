@@ -188,3 +188,52 @@
         @include abstracts.size(100%, 100%);
     }
 }
+
+//Strategize Design Develop
+.strategize-design-develop {
+    @include abstracts.flex-layout(column, null, null, 60px, null);
+    background-image: url('../assets/images/common/vector.webp'),
+        url('../assets/images/common/vector.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    &-heading {
+        @include abstracts.flex-layout(column, null, null, 40px, null);
+    }
+
+    &-main-heading {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-lg,
+            abstracts.$primary-text-color
+        );
+        line-height: abstracts.$secondary-line-height;
+    }
+
+    &-description {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-md,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-image-wrapper {
+        padding-left: 16px;
+        @include abstracts.position(relative);
+    }
+
+    &-image-frame {
+        @include abstracts.position(absolute, -16px, null, null, 0);
+        @include abstracts.size(95%, 100%);
+        background-color: #e1e6e8;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    &-image {
+        @include abstracts.size(100%, auto);
+        @include abstracts.position(relative);
+        z-index: 2;
+    }
+}
