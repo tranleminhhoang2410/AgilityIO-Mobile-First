@@ -7,22 +7,22 @@
         <div class="contact-form-content">
             <div class="contact-form-grid">
                 <div class="contact-form-group">
-                    <label class="contact-form-label" for="tell-us-about-your-product">
+                    <label class="contact-form-label" for="name">
                         Name
                     </label>
-                    <input type="text" class="contact-form-input" />
+                    <input type="text" class="contact-form-input" id="name" name="name" />
                 </div>
                 <div class="contact-form-group">
-                    <label class="contact-form-label" for="tell-us-about-your-product">
+                    <label class="contact-form-label" for="email">
                         Email
                     </label>
-                    <input type="email" class="contact-form-input" />
+                    <input type="email" class="contact-form-input" id="email" name="email" />
                 </div>
                 <div class="contact-form-group">
-                    <label class="contact-form-label" for="tell-us-about-your-product">
+                    <label class="contact-form-label" for="phone">
                         Phone (optional)
                     </label>
-                    <input type="tel" class="contact-form-input" />
+                    <input type="tel" class="contact-form-input" id="phone" name="phone" />
                 </div>
             </div>
             <div class="contact-form-group">
@@ -33,10 +33,11 @@
                     id="tell-us-about-your-product" cols="30" rows="10"></textarea>
             </div>
             <div class="contact-form-group">
-                <label class="contact-form-label" for="tell-us-about-your-product">
+                <label class="contact-form-label" for="how-did-you-hear-about-agility">
                     How did you hear about Agility?
                 </label>
-                <input type="text" class="contact-form-input" />
+                <input type="text" class="contact-form-input" name="how-did-you-hear-about-agility"
+                    id="how-did-you-hear-about-agility" />
             </div>
             <div class="g-recaptcha" data-sitekey="6LeccQgoAAAAAELT2ZFytfqkSmaSAujRSl-2xCLm"></div>
             <button id="submit-btn" class="submit-btn" type="submit">Submit</button>
