@@ -42,6 +42,10 @@
             @include abstracts.make-grid-items(1, 16px, null);
         }
 
+        &-label {
+            line-height: 1;
+        }
+
         &-input {
             padding: 12px;
         }
