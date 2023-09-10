@@ -1,5 +1,9 @@
 @use '../abstracts';
 
+html {
+    scroll-behavior: smooth;
+}
+
 .content {
     margin-top: abstracts.$header-height;
 }
