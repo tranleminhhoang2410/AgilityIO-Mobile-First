@@ -3,6 +3,7 @@
 .header {
     @include abstracts.position(fixed, 0, 0, null, 0);
     background-color: abstracts.$white-color;
+    z-index: 9999;
 
     &-content {
         @include abstracts.flex-layout(null, center, space-between, null, null);

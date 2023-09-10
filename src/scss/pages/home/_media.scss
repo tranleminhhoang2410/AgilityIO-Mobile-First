@@ -21,6 +21,13 @@
             @include abstracts.make-grid-items(2, 16px, 24px);
         }
     }
+
+    //Case studies
+    .case-studies {
+        &-list {
+            @include abstracts.make-grid-items(2, 16px, 16px);
+        }
+    }
 }
 
 @include abstracts.make-media-query(992px) {
@@ -56,6 +63,13 @@
 
         &-grid {
             @include abstracts.make-grid-items(3, 16px, 24px);
+        }
+    }
+
+    //Case studies
+    .case-studies {
+        &-list {
+            @include abstracts.make-grid-items(3, 16px, 16px);
         }
     }
 }

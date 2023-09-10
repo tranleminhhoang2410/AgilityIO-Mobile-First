@@ -3,8 +3,8 @@
 //Banner
 .banner {
     @include abstracts.size(100%, 400px);
-    background-image: url('../assets/images/home/home-banner.webp'),
-        url('../assets/images/home/home-banner.png');
+    background-image: url('../assets/images/home/webp/home-banner.webp'),
+        url('../assets/images/home/png/home-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -68,7 +68,7 @@
 
     &-item {
         padding: 16px 0;
-        border-top: 1px solid #bfbfbf;
+        border-top: 1px solid abstracts.$who-we-are-border-color;
         @include abstracts.flex-layout(column, null, null, 16px, null);
     }
 
@@ -86,5 +86,93 @@
             abstracts.$fs-xxx-sm,
             abstracts.$primary-text-color
         );
+    }
+}
+
+//Case studies
+.case-studies {
+    &-list {
+        @include abstracts.make-grid-items(1, 16px, null);
+    }
+
+    &-item {
+        @include abstracts.size(100%, 300px);
+        background-color: abstracts.$case-study-background-color;
+        @include abstracts.position(relative);
+        overflow: hidden;
+
+        .client-brand {
+            @include abstracts.size(280px, 280px);
+            @include abstracts.position(absolute, -150px, null, null, -150px);
+            border-radius: 50%;
+        }
+
+        .client-logo {
+            @include abstracts.position(absolute, 65%, null, null, 55%);
+            @include abstracts.size(35%, null);
+        }
+    }
+
+    &-heading {
+        @include abstracts.position(absolute, null, null, 20px, 20px);
+    }
+
+    &-name {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-xxx-md,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-platform {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-x-sm,
+            abstracts.$primary-text-color
+        );
+    }
+
+    &-image {
+        @include abstracts.size(60%, auto);
+
+        &.bose {
+            @include abstracts.position(absolute, 30%, -5%, null, null);
+        }
+
+        &.les-mills {
+            @include abstracts.position(absolute, 5%, -5%, null, null);
+        }
+
+        &.nada {
+            @include abstracts.position(absolute, -5%, -5%, null, null);
+        }
+
+        &.meez {
+            @include abstracts.position(absolute, 25%, 5%, null, null);
+        }
+
+        &.ninja-van {
+            @include abstracts.position(absolute, 20%, -5%, null, null);
+        }
+
+        &.paga {
+            @include abstracts.size(50%, auto);
+            @include abstracts.position(absolute, 10%, 5%, null, null);
+        }
+
+        &.worldroamer {
+            @include abstracts.size(50%, auto);
+            @include abstracts.position(absolute, 5%, 10%, null, null);
+        }
+
+        &.early-bird {
+            @include abstracts.size(80%, auto);
+            @include abstracts.position(absolute, 5%, -15%, null, null);
+        }
+
+        &.kinspire {
+            @include abstracts.position(absolute, 5%, -5%, null, null);
+        }
     }
 }
