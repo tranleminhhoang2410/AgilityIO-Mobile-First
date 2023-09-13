@@ -29,6 +29,11 @@ button {
     }
 }
 
+[class*='-underline'] {
+    @include abstracts.size(60px, 4px);
+    background-color: abstracts.$primary-text-color;
+}
+
 @include abstracts.make-media-query(992px) {
     .section-layout {
         padding-top: 64px;

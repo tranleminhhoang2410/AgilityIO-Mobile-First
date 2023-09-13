@@ -1,0 +1,91 @@
+@use '../../abstracts';
+
+//Banner
+.banner {
+    @include abstracts.size(100%, 400px);
+    background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        ),
+        url('../assets/images/about/webp/about-banner.webp'),
+        url('../assets/images/about/jpg/about-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-content {
+        @include abstracts.position(relative);
+        @include abstracts.size(null, 100%);
+        &-heading {
+            @include abstracts.size(null, 100%);
+            @include abstracts.flex-layout(column, center, center, 32px, null);
+            @include abstracts.font(
+                'Roboto-ExtraBold',
+                abstracts.$fs-lg,
+                abstracts.$white-color
+            );
+            text-align: center;
+            .play-block {
+                @include abstracts.size(60px, 60px);
+                display: flex;
+
+                .inverted-play-btn {
+                    display: none;
+                }
+            }
+        }
+
+        &-main-heading {
+            line-height: abstracts.$secondary-line-height;
+        }
+    }
+
+    .indicator {
+        @include abstracts.size(4px, 60px);
+
+        &-top {
+            @extend .indicator;
+            @include abstracts.position(absolute, null, null, 0, 50%);
+            background-color: abstracts.$white-color;
+        }
+
+        &-bottom {
+            @extend .indicator;
+            background-color: abstracts.$primary-text-color;
+            @include abstracts.position(absolute, null, null, -60px, 50%);
+        }
+    }
+}
+
+//Who we are
+.who-we-are {
+    background-color: #e1e6e8;
+
+    &-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @include abstracts.flex-layout(column, null, null, 60px, null);
+    }
+
+    &-heading {
+        @include abstracts.flex-layout(column, null, null, 40px, null);
+    }
+
+    &-main-heading {
+        @include abstracts.font(
+            'Roboto-Bold',
+            abstracts.$fs-x-lg,
+            abstracts.$primary-text-color
+        );
+        line-height: abstracts.$secondary-line-height;
+    }
+
+    &-description {
+        @include abstracts.font(
+            'Roboto-Regular',
+            abstracts.$fs-xx-sm,
+            abstracts.$primary-text-color
+        );
+    }
+}

@@ -1,0 +1,99 @@
+@use '../../abstracts';
+
+@include abstracts.make-media-query(576px) {
+    //Who we are
+    .who-we-are {
+        &-main-heading {
+            max-width: 80%;
+        }
+    }
+}
+
+@include abstracts.make-media-query(768px) {
+    //Bannner
+    .banner {
+        @include abstracts.size(100%, 460px);
+
+        &-content {
+            &-heading {
+                @include abstracts.font(
+                    'Roboto-ExtraBold',
+                    abstracts.$fs-xxxx-lg,
+                    abstracts.$white-color
+                );
+            }
+
+            &-main-heading {
+                line-height: abstracts.$normal-line-height;
+            }
+        }
+    }
+
+    //Who we are
+    .who-we-are {
+        &-heading {
+            flex-direction: row;
+
+            &-wrapper {
+                flex: 0 0 40%;
+            }
+        }
+
+        &-description {
+            @include abstracts.font(
+                'Roboto-Regular',
+                abstracts.$fs-md,
+                abstracts.$primary-text-color
+            );
+        }
+    }
+}
+
+@include abstracts.make-media-query(992px) {
+    //Banner
+    .banner {
+        @include abstracts.size(100%, 690px);
+
+        &-content {
+            &-heading {
+                @include abstracts.font(
+                    'Roboto-ExtraBold',
+                    abstracts.$fs-x-xl,
+                    abstracts.$white-color
+                );
+                @include abstracts.flex-layout(
+                    row,
+                    flex-end,
+                    flex-start,
+                    32px,
+                    null
+                );
+                @include abstracts.position(absolute, null, null, 80px, 12px);
+            }
+        }
+
+        .indicator {
+            &-top,
+            &-bottom {
+                left: 20px;
+            }
+        }
+    }
+}
+
+@include abstracts.make-media-query(1200px) {
+    //Banner
+    .banner {
+        @include abstracts.size(100%, 900px);
+
+        &-heading {
+            margin-top: 64px;
+            @include abstracts.font(
+                'Roboto-Medium',
+                abstracts.$fs-xxx-lg,
+                abstracts.$white-color
+            );
+            line-height: abstracts.$normal-line-height;
+        }
+    }
+}
