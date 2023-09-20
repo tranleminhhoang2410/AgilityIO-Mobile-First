@@ -49,11 +49,6 @@
         );
     }
 
-    &-underline {
-        @include abstracts.size(60px, 4px);
-        background-color: abstracts.$primary-text-color;
-    }
-
     &-description {
         @include abstracts.font(
             'Roboto-Regular',
