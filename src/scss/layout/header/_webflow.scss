@@ -15,8 +15,29 @@
         }
 
         .navbar {
-            display: none;
             @include abstracts.size(null, 100%);
+
+            &-list {
+                display: none;
+                @include abstracts.size(null, 100%);
+            }
+
+            &-item {
+                @include abstracts.size(null, 100%);
+                @include abstracts.position(relative);
+
+                &-underline {
+                    display: none;
+                    @include abstracts.position(absolute, null, 0, 0, 0);
+                    @include abstracts.size(100%, 8px);
+                }
+
+                &.active {
+                    .navbar-item-underline {
+                        display: block;
+                    }
+                }
+            }
 
             &-link {
                 @include abstracts.font(
@@ -32,7 +53,7 @@
                     null,
                     null
                 );
-                border-bottom: 4px solid transparent;
+                // border-bottom: 4px solid transparent;
 
                 &:hover {
                     opacity: 0.6;
