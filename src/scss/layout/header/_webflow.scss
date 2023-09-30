@@ -15,10 +15,10 @@
         }
 
         .navbar {
+            display: none;
             @include abstracts.size(null, 100%);
 
             &-list {
-                display: none;
                 @include abstracts.size(null, 100%);
             }
 

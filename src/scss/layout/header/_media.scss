@@ -6,6 +6,8 @@
             display: none;
         }
         .navbar {
+            display: flex;
+
             &-list {
                 @include abstracts.flex-layout(row, center, null, 40px);
             }
