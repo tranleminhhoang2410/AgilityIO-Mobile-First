@@ -31,6 +31,15 @@ const toggleMenu = () => {
 
 menuMobile.addEventListener('click', toggleMenu);
 
+//Close menu when click in Contact
+navbarLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        if (link.innerText === 'Contact') {
+            toggleMenu();
+        }
+    });
+});
+
 // Close menu when clicking outside
 document.addEventListener('click', (event) => {
     const targetElement = event.target as HTMLElement;
