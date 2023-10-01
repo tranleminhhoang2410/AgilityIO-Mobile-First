@@ -3,15 +3,19 @@ const navbarLinks = document.querySelectorAll(
 ) as NodeListOf<HTMLAnchorElement>;
 const menuMobile = document.querySelector('.menu-mobile') as HTMLDivElement;
 const navbarList = document.querySelector('.navbar-list') as HTMLUListElement;
+const navbarItems = document.querySelectorAll(
+    '.navbar-item'
+) as NodeListOf<HTMLElement>;
 
 // Active link
-const activeUrl: string = window.location.href.split('/')[3];
+const currentUrl: string = window.location.href.split('/')[3];
 
 const activeLink = Array.from(navbarLinks).find((link) =>
-    link.href.includes(activeUrl)
-);
-if (activeLink) {
-    activeLink.parentElement!.classList.add('active');
+    link.href.includes(currentUrl)
+) as HTMLAnchorElement;
+
+if (activeLink && currentUrl !== 'case-study') {
+    activeLink.parentElement?.classList.add('active');
 }
 
 // Toggle menu
@@ -19,10 +23,13 @@ let isMenuOpen: boolean = false;
 
 const toggleMenu = () => {
     navbarList.classList.toggle('toggle'); // Toggle the 'toggle' class
+    Array.from(navbarItems).forEach((item) =>
+        item.classList.toggle('container')
+    );
     isMenuOpen = !isMenuOpen; // Invert the menu state
 };
 
-menuMobile?.addEventListener('click', toggleMenu);
+menuMobile.addEventListener('click', toggleMenu);
 
 // Close menu when clicking outside
 document.addEventListener('click', (event) => {

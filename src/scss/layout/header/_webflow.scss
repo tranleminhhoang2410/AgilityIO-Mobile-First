@@ -10,16 +10,49 @@
         @include abstracts.flex-layout(null, center, space-between, null, null);
         @include abstracts.size(null, abstracts.$header-height);
 
-        .menu-mobile {
-            display: block;
-        }
-
         .navbar {
-            display: none;
-            @include abstracts.size(null, 100%);
+            @include abstracts.size(100%, 100%);
+            @include abstracts.flex-layout(
+                null,
+                center,
+                space-between,
+                null,
+                null
+            );
 
             &-list {
+                display: none;
                 @include abstracts.size(null, 100%);
+
+                &.toggle {
+                    padding: 32px 0;
+                    @include abstracts.flex-layout(
+                        column,
+                        flex-start,
+                        null,
+                        32px,
+                        null
+                    );
+                    @include abstracts.position(absolute, 100%, 0, null, 0);
+                    @include abstracts.size(100%, auto);
+                    background-color: abstracts.$white-color;
+
+                    .navbar-item {
+                        // padding: unset;
+                        @include abstracts.size(100%, 100%);
+                    }
+
+                    .navbar-link {
+                        display: block;
+                        text-align: left;
+                    }
+
+                    .navbar-item-underline {
+                        top: 32px;
+                        margin-left: 16px;
+                        @include abstracts.size(60px, 6px);
+                    }
+                }
             }
 
             &-item {

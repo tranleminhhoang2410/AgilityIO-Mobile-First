@@ -10,6 +10,29 @@
 
             &-list {
                 @include abstracts.flex-layout(row, center, null, 40px);
+
+                &.toggle {
+                    padding: unset;
+                    @extend .navbar-list;
+                    @include abstracts.position(unset);
+                    @include abstracts.size(unset, 100%);
+
+                    .navbar-item {
+                        max-width: unset;
+                        padding: unset;
+                        margin: unset;
+                    }
+
+                    .navbar-item-underline {
+                        top: unset;
+                        margin-left: unset;
+                        @include abstracts.size(100%, 8px);
+                    }
+
+                    .navbar-link {
+                        display: flex;
+                    }
+                }
             }
         }
     }
